@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defects Main Page</title>
+</head>
+<body>
+    <h2>List of Defects</h2>
+    <table>
+        <tr>
+            <th>Vessel</th>
+            <th>Title</th>
+            <th>Date when founded</th>
+            <th>Date when closed</th>
+            <th>Status</th>
+        </tr>
+        {% for defect in defects %}
+            <tr>
+                <td>{{defects.vessel}}</td>
+                <td>{{defects.title}}</td>
+                <td>{{defects.date_when_found}}</td>
+                <td>{{defects.date_when_closed}}</td>
+                <td>{{defects.status}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
